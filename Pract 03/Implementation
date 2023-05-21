@@ -1,3 +1,3 @@
 sudo apt install build-essential
-mpicc mpi.c -o mpi
+mpicc mpi.c(filename) -o mpi
 sudo apt install mpich (For installation)
