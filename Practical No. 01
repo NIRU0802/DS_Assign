@@ -1,0 +1,20 @@
+AIM: Implement multi-threaded client/server Process communication using RMI.
+
+What is thread?
+A thread of execution is the smallest sequence of programmed instructions that can be managed independently by a schedule which is typically a part of the operating systems. 
+The implementation of threads and processes differs between operating systems. A process consists of an execution environment together with one or more threads.
+A threads is the operating system abstraction of an activity the term derives from the phrase ‘thread of execution’. An execution environment is the unit of resource management.
+
+Multithreading in the Server:
+RMI automatically will execute each client in a separate thread. 
+There will only be one instance of your server object no matter how many clients, so you need to make sure that shared data is synchronized appropriately. 
+In particular, any data that may be accessed by more than one client at a time must be synchronized.
+Multithreading can also introduce very difficult to find bugs into your program.
+
+What is RMI?
+RMI provides communication between java applications that are deployed on different servers and connected remotely using objects called stub and skeleton.
+This communication architecture makes a distributed application seem like a group of objects communicating across a remote connection.
+
+RMI Registry :
+It is a remote object registry, a Bootstrap naming service, that is used by RMI SERVER on the same host to bind remote objects to names.
+Clients on local and remote hosts then look up the remote objects and make remote method invocations.
